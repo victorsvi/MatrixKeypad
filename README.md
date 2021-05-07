@@ -1,5 +1,7 @@
 # MatrixKeypad
 
+[![Arduino Compatible](https://github.com/victorsvi/MatrixKeypad/actions/workflows/Arduino%20Compatible.yml/badge.svg)](https://github.com/victorsvi/MatrixKeypad/actions?workflow=Arduino%20Compatible)
+
 Simple to use Arduino library to interface matrix keypads.
 
 ### Features
