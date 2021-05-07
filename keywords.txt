@@ -1,0 +1,17 @@
+# Syntax Coloring Map For MatrixKeypad
+
+# Datatypes (KEYWORD1)
+MatrixKeypad_t	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+MatrixKeypad_create	KEYWORD2
+MatrixKeypad_scan	KEYWORD2
+MatrixKeypad_hasKey	KEYWORD2
+MatrixKeypad_getKey	KEYWORD2
+MatrixKeypad_waitForKey	KEYWORD2
+MatrixKeypad_waitForKeyTimeout	KEYWORD2
+MatrixKeypad_flush	KEYWORD2
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
