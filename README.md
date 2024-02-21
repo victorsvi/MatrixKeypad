@@ -13,30 +13,30 @@ Simple to use Arduino library to interface matrix keypads.
 
 ### Limitations
 
-- Don't handle multiples keypress simultaneously; 
+- Doesn't handle multiple keypresses simultaneously; 
 - Saves only the last key pressed.
 
 ## How to use
 
 ### Instalation 
 
-You can instal the library by:
+You can install the library by:
 1. Open the Library Manager inside Arduino IDE, find for "MatrixKeypad" and click install;
 2. Go to _Releases_, download the .zip file, import the file inside Arduino IDE. 
 
 ### Pin and key mapping
 
-A matrix keypad will have some pins or wires that you have to connect to digital inputs of the arduino.
-Each of those pins is either connected to a column or a row. You will need to sort out which is which. To to that, you can use a multimeter in continuity mode and do a iterative method:
+A matrix keypad will have some pins or wires that you have to connect to digital inputs of the Arduino.
+Each of those pins are either connected to a column or a row. You will need to sort out which is which. To do that, you can use a multimeter in continuity mode and do a iterative method:
 1. Place each probe to a distinct pin;
 2. Start pressing the keypad's buttons;
 3. If you detect continuity, you are probing the row and column pins of the key you are pressing;
-4. If you gone trough all the keys and found no continuity, you are either probing two rows or two columns;
+4. If you've gone trough all the keys and found no continuity, you are either probing two rows or two columns;
 5. Keep doing that until you are sure which pin is connected to which row or column.
 
 Then you can connect the keypad to the Arduino and define the two pin mappings, one for the rows and another for the columns. The pin mapping is a vector that holds the pin number indexed by the order of the row or column. You can use the top left of the keypad as a referential, so the first column to the left is the index 0, the second is the index 1...
  
-The key mapping, is a bidimentional array that holds the key character that will be returned by the library indexed by row and column, using the same referential as the pin mappings.
+The key mapping is a bidimentional array that holds the key character that will be returned by the library indexed by row and column, using the same referential as the pin mappings.
 
 Here is a example of a 4x3 keypad:
 ```
@@ -77,7 +77,7 @@ char keymap[rown][coln] =
 
 You can find more information about this in the [documentation](../master/docs/api.md) or by [practical examples](../master/examples).
 
-### Non-bloking read
+### Non-blocking read
 
 To perform a non-blocking read, you will need to:
 1. Define your pin and key mapping;
@@ -85,16 +85,16 @@ To perform a non-blocking read, you will need to:
 3. call MatrixKeypad_create in "setup()" to initialize the keypad object;
 4. call Keypad_scan in "loop()" to scan the keypad for keypresses;
 5. call MatrixKeypad_hasKey or MatrixKeypad_getKey to know if a key was pressed and retrieve the key.
-You can check out this [example skecth](../master/examples/MatrixKeypadNonBlocking/MatrixKeypadNonBlocking.ino).
+You can check out this [example sketch](../master/examples/MatrixKeypadNonBlocking/MatrixKeypadNonBlocking.ino).
 
-### Bloking read
+### Blocking read
 
 To perform a blocking read, you will need to:
 1. Define your pin and key mapping;
 2. create a pointer variable of the type MatrixKeypad_t;
 3. call MatrixKeypad_create in "setup()" to initialize the keypad object;
 4. call MatrixKeypad_waitForKey when you want to wait for the user input.
-You can check out this [example skecth](../master/examples/MatrixKeypadBlocking/MatrixKeypadBlocking.ino).
+You can check out this [example sketch](../master/examples/MatrixKeypadBlocking/MatrixKeypadBlocking.ino).
 
 ## Documentation
 
